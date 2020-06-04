@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="../book.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" 
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <script src="../book.js"></script>
+  <script src="../util.js"></script>
+
+  <title>Introduction</title>
+</head>
+<body>
+  <header id="header"></header>
+
+  <div class="container">
+    <div class="title">
+      <h3 class="chapter">Introduction</h3>
+    </div>
+
+    <h4 class="section">A simple page</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/684ea73742ae2f3598238b328648b933.js?file=hello_world.html"></script>
+      <h5><a href="hello_world.html">Hello, World</a></h5>
+    </div>
+
+    <h4 class="section">Objectives</h4>
+    <ul>
+      <li>Construct elements with HTML</li>
+      <li>Decorate various elements with CSS</li>
+    </ul>
+
+    <h4 class="section">Methodology</h4>
+    <ul>
+      <li>What? Why? How?</li>
+      <li>Examples</li>
+      <li>Resources</li>
+      <li>Tools</li>
+    </ul>
+
+    <h4 class="section">History</h4>
+    <blockquote>
+      <p class="reset">滚滚长江东逝水，浪花淘尽英雄。是非成败转头空。青山依旧在，几度夕阳红。</p>
+      <footer>杨慎·临江仙</footer>
+    </blockquote>
+
+    <table id="computer-history" class="table table-sm table-striped">
+      <caption>Computer History</caption>
+    </table>
+
+    <figure class="text-center">
+      <img class="figure-img img-fluid rounded" src="../img/640px-Model_of_a_Turing_machine.jpg" alt="">
+      <figcaption class="figure-caption">Turing machine (courtesy of Wikipedia)</figcaption>
+    </figure>
+
+    <figure class="text-center">
+      <img class="figure-img img-fluid rounded" src="../img/628px-Eniac.jpg" alt="">
+      <figcaption class="figure-caption">Eniac (courtesy of Wikipedia)</figcaption>
+    </figure>
+
+    <table id="web-history" class="table table-sm table-striped">
+      <caption>Web History</caption>
+    </table>
+
+  </div>
+
+  <script>
+    $(() => {
+      $('#header').append(bao.book.getNavbar('Contents', 1));
+
+      var computerHistory = {
+        cols: [
+          { title: 'Event/theory',  type: 'string', align: 'center' },
+          { title: 'Time',          type: 'string', align: 'center' },
+          { title: 'People',        type: 'string' },
+        ],
+        data: [
+          [ 'Turing machine, Turing test', 1936, 'Alan Turing' ],
+          [ 'Von Neumann architecture', 1945, 'John von Neumann' ],
+          [ 'ENIAC', 1946, 'John Mauchly, J. Presper Eckert, 朱传榘' ],
+          [ 'ARPANET', 1969, 'Defense Advanced Research Projects Agency (DARPA)' ],
+          [ 'Unix', 1970, 'Ken Thompson, Dennis Ritchie, Brian Kernighan, Douglas McIlroy, Joe Ossanna' ],
+          [ 'C', 1972, 'Dennis Ritchie' ],
+          [ 'C++', 1985, 'Bjarne Stroustrup' ],
+          [ 'Python', 1990, 'Guido van Rossum' ],
+          [ 'Java', 1995, 'James Gosling' ],
+        ]
+      };
+      bao.util.datatable('computer-history', computerHistory, { ordering: false }, false);
+
+      var webHistory = {
+        cols: [
+          { title: 'Version', type: 'string', align: 'center' },
+          { title: 'Time',    type: 'string', align: 'center' },
+          { title: 'People',  type: 'string' }, 
+        ],
+        data: [
+          [ 'HTML',       1991, 'Tim Berners-Lee' ],
+          [ 'JavaScript', 1995, 'Brendan Eich' ],
+          [ 'CSS',        1996, 'Håkon Wium, LieBert Bos' ],
+        ]
+      };
+      bao.util.datatable('web-history', webHistory, { ordering: false }, false);
+
+    });
+  </script>
+
+</body>
+</html>
