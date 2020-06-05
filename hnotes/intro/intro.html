@@ -9,7 +9,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-  <link rel="stylesheet" href="../book.css">
+  <link rel="stylesheet" href="../../book.css">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
@@ -18,8 +18,9 @@
     integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
     crossorigin="anonymous"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-  <script src="../book.js"></script>
-  <script src="../util.js"></script>
+  <script src="../../studio.js"></script>
+  <script src="../../util.js"></script>
+  <script src="../hnotes.js"></script>
 
   <title>Introduction</title>
 </head>
@@ -79,7 +80,12 @@
 
   <script>
     $(() => {
-      $('#header').append(bao.book.getNavbar('Contents', 1));
+      $('#header').append(bao.studio.getNavbar({
+        logo     : bao.studio.hnotes.logo,
+        sections : bao.studio.hnotes.sections,
+        section  : 'Contents', 
+        level    : 1
+      }));
 
       var computerHistory = {
         cols: [

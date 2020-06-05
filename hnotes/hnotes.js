@@ -133,9 +133,19 @@ bao.studio.hnotes = (() => {
     }
   ];
 
+  function addChapterNavbar() {
+    $('#header').append(bao.studio.getNavbar({
+      logo     : bao.studio.hnotes.logo,
+      sections : bao.studio.hnotes.sections,
+      section  : 'Contents', 
+      level    : 1
+    }));
+  }
+
   return {
     logo     : '🕸',
     sections : SECTIONS,
-    chapters : chapters
+    chapters : chapters,
+    addChapterNavbar : addChapterNavbar
   };
 })();
