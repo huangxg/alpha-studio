@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../studio.css">
   <link rel="stylesheet" href="../../book.css">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -17,7 +20,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" 
     integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
     crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="../../studio.js"></script>
   <script src="../../util.js"></script>
   <script src="../hnotes.js"></script>
@@ -58,9 +62,27 @@
       <footer>杨慎·临江仙</footer>
     </blockquote>
 
-    <table id="computer-history" class="table table-sm table-striped">
-      <caption>Computer History</caption>
-    </table>
+    <div id="computer-techs" class="table-wrap">
+      <v-simple-table>
+        <template v-slot:default>
+          <caption>Computer Technologies</caption>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Technology</th>
+              <th>People</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in techs" :key="item.name">
+              <td>{{ item.time }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.people }}</td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
+    </div>
 
     <figure class="text-center">
       <img class="figure-img img-fluid rounded" src="../img/640px-Model_of_a_Turing_machine.jpg" alt="">
@@ -72,10 +94,27 @@
       <figcaption class="figure-caption">Eniac (courtesy of Wikipedia)</figcaption>
     </figure>
 
-    <table id="web-history" class="table table-sm table-striped">
-      <caption>Web History</caption>
-    </table>
-
+    <div id="web-techs" class="table-wrap">
+      <v-simple-table>
+        <template v-slot:default>
+          <caption>Web Technologies</caption>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Technology</th>
+              <th>People</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in techs" :key="item.name">
+              <td>{{ item.time }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.people }}</td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
+    </div>
   </div>
 
   <script>
@@ -87,40 +126,37 @@
         level    : 1
       }));
 
-      var computerHistory = {
-        cols: [
-          { title: 'Event/theory',  type: 'string', align: 'center' },
-          { title: 'Time',          type: 'string', align: 'center' },
-          { title: 'People',        type: 'string' },
-        ],
-        data: [
-          [ 'Turing machine, Turing test', 1936, 'Alan Turing' ],
-          [ 'Von Neumann architecture', 1945, 'John von Neumann' ],
-          [ 'ENIAC', 1946, 'John Mauchly, J. Presper Eckert, 朱传榘' ],
-          [ 'ARPANET', 1969, 'Defense Advanced Research Projects Agency (DARPA)' ],
-          [ 'Unix', 1970, 'Ken Thompson, Dennis Ritchie, Brian Kernighan, Douglas McIlroy, Joe Ossanna' ],
-          [ 'C', 1972, 'Dennis Ritchie' ],
-          [ 'C++', 1985, 'Bjarne Stroustrup' ],
-          [ 'Python', 1990, 'Guido van Rossum' ],
-          [ 'Java', 1995, 'James Gosling' ],
-        ]
-      };
-      bao.util.datatable('computer-history', computerHistory, { ordering: false }, false);
+      var computerTechs = [
+        [ 1936, 'Turing machine, Turing test', 'Alan Turing' ],
+        [ 1945, 'Von Neumann architecture', 'John von Neumann' ],
+        [ 1946, 'ENIAC', 'John Mauchly, J. Presper Eckert, 朱传榘' ],
+        [ 1969, 'ARPANET', 'Defense Advanced Research Projects Agency (DARPA)' ],
+        [ 1970, 'Unix', 'Ken Thompson, Dennis Ritchie, Brian Kernighan, Douglas McIlroy, Joe Ossanna' ],
+        [ 1972, 'C', 'Dennis Ritchie' ],
+        [ 1985, 'C++', 'Bjarne Stroustrup' ],
+        [ 1990, 'Python', 'Guido van Rossum' ],
+        [ 1995, 'Java', 'James Gosling' ],
+      ];
+      new Vue({
+        el: '#computer-techs',
+        vuetify: new Vuetify(),
+        data: { techs: computerTechs.map(t => {
+          return { time: t[0], name: t[1], people: t[2] };
+        }) }
+      });
 
-      var webHistory = {
-        cols: [
-          { title: 'Version', type: 'string', align: 'center' },
-          { title: 'Time',    type: 'string', align: 'center' },
-          { title: 'People',  type: 'string' }, 
-        ],
-        data: [
-          [ 'HTML',       1991, 'Tim Berners-Lee' ],
-          [ 'JavaScript', 1995, 'Brendan Eich' ],
-          [ 'CSS',        1996, 'Håkon Wium, LieBert Bos' ],
-        ]
-      };
-      bao.util.datatable('web-history', webHistory, { ordering: false }, false);
-
+      var webTechs = [
+        [ 1991, 'HTML', 'Tim Berners-Lee' ],
+        [ 1995, 'JavaScript', 'Brendan Eich' ],
+        [ 1996, 'CSS', 'Håkon Wium, LieBert Bos' ],
+      ];
+      new Vue({
+        el: '#web-techs',
+        vuetify: new Vuetify(),
+        data: { techs: webTechs.map(t => {
+          return { time: t[0], name: t[1], people: t[2] };
+        }) }
+      });
     });
   </script>
 

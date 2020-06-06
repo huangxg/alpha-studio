@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
@@ -20,11 +19,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" 
     integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
     crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="studio.js"></script>
-  <script src="courses.js"></script>
   <script src="util.js"></script>
 
   <title>Alpha Studio</title>
@@ -38,7 +35,7 @@
       <div>Discover, Inspire, Learn</div>
     </div>
 
-    <div id="app"><v-app>
+    <div id="courses-table" class="table-wrap">
       <v-simple-table>
         <template v-slot:default>
           <thead>
@@ -57,7 +54,7 @@
           </tbody>
         </template>
       </v-simple-table>
-    </v-app></div>
+    </div>
 
     <div class="publisher m-5 p-5">
       <div>Alpha Studio</div>
@@ -69,10 +66,35 @@
     $(() => {
       $('#header').append(bao.studio.getNavbar({ section: 'Courses', level: 0 }));
 
+      var courses = [
+        {
+          id   : "101",
+          name : "Introduction to HTML",
+          url  : "hnotes/index.html",
+          logo : "img/html5.svg",
+          hours: 8
+        }, {
+          id   : "102",
+          name : "Introduction to CSS",
+          url  : "hnotes/index.html",
+          logo : "img/css3.svg",
+          hours: 8
+        }, {
+          id  : "201",
+          name : "Introduction to JavaScript",
+          logo  : "img/html5.svg",
+          hours : 8
+        }, {
+          id  : "202",
+          name : "Intermidate JavaScript",
+          logo  : "img/html5.svg",
+          hours : 8
+        }
+      ];
       new Vue({
-        el: '#app',
+        el: '#courses-table',
         vuetify: new Vuetify(),
-        data: { courses: bao.studio.courses.list }
+        data: { courses: courses }
       });
 
     });

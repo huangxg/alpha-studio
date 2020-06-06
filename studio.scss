@@ -4,6 +4,8 @@ body {
 
 .v-application--wrap {
   min-height: auto;
+  margin: 16px 0;
+  padding: 16px 0;
 }
 
 h2 {
@@ -62,6 +64,14 @@ a {
   text-align: center;
 }
 
+.table-wrap {
+  max-width: 800px;
+  margin: 3rem auto;
+  th {
+    font-size: 1rem;  
+  }
+}
+
 .title {
   margin: 3rem auto;
   padding: 3rem;
@@ -78,10 +88,6 @@ a {
 .publisher {
   text-align: center;
   font-size: 1.5rem
-}
-
-td {
-  padding: 8px;
 }
 
 .text-logo {
