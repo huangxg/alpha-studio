@@ -9,6 +9,9 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <link rel="stylesheet" href="studio.css">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -19,6 +22,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="studio.js"></script>
   <script src="courses.js"></script>
   <script src="util.js"></script>
@@ -34,12 +38,26 @@
       <div>Discover, Inspire, Learn</div>
     </div>
 
-    <!-- <div id="courses-table">
-      <course-row v-for="c in courses" :course="c" :key="c.title"></course-row>
-    </div> -->
-
-    <table id="course-table" class="table table-sm table-striped">
-    </table>
+    <div id="app"><v-app>
+      <v-simple-table>
+        <template v-slot:default>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th class="text-right">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in courses" :key="item.name">
+              <td>{{ item.id }}</td>
+              <td><a :href=item.url>{{ item.name }}</a></td>
+              <td class="text-right">{{ item.hours }}</td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
+    </v-app></div>
 
     <div class="publisher m-5 p-5">
       <div>Alpha Studio</div>
@@ -51,26 +69,12 @@
     $(() => {
       $('#header').append(bao.studio.getNavbar({ section: 'Courses', level: 0 }));
 
-      // bao.studio.courses.initVue();
-      // var a = new Vue({
-      //   el: '#courses-table',
-      //   data: { courses: bao.studio.courses.list }
-      // });
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: { courses: bao.studio.courses.list }
+      });
 
-      var res = {
-        cols: [
-          { title: 'Title', type: 'string' },
-          { title: 'Id'   , type: 'string' },
-          { title: 'Hours', type: 'number', align: 'center' }
-        ],
-        data: [
-          [ 'Introduction to HTML', '101', 8 ],
-          [ 'Introduction to CSS', '102', 8 ],
-          [ 'Introduction to JavaScript', '103', 8 ],
-          [ 'Intermediate to JavaScript', '104', 8 ],
-        ]
-      };
-      bao.util.datatable('course-table', res, { ordering: false }, false);
     });
   </script>
 </body>

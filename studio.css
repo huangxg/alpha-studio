@@ -2,6 +2,14 @@ body {
   font-family: source-serif-pro, serif;
 }
 
+.v-application--wrap {
+  min-height: auto;
+}
+
+h2 {
+  padding: 16px 0;
+}
+
 p {
   text-indent: 2em;
 }
