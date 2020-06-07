@@ -18,31 +18,27 @@
     integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
     crossorigin="anonymous"></script>
   <script src="../studio.js"></script>
-  <script src="hnotes.js"></script>
+  <script src="jsnotes.js"></script>
 
-  <title>HTML and CSS Notes</title>
+  <title>JavaScript Notes</title>
 </head>
 <body>
   <header id="header"></header>
 
   <div class="container">
     <div class="title">
-      <h1>HTML and CSS Notes</h1>
+      <h1>JavaScript Notes</h1>
       <div class="author">Dr. Alpha</div>
     </div>
 
-    <div class="text-center" style="font-size: 10rem;">
-      <a href="contents.html">🕸</a>
+    <div class="text-center m-5 p-5">
+      <div class="text-logo js"><span>JS</span></div>
+      <div class="text-logo es6">ES6</div>
     </div>
-
-    <figure class="text-center">
-      <img height="160px" src="img/html5.svg" alt="HTML5">
-      <img height="160px" src="img/css3.svg" alt="CSS3" style="padding: 0 1rem;">
-    </figure>
 
     <div class="publisher m-5 p-5">
       <div>Alpha Studio</div>
-      <div>© 2019 - 2020</div>
+      <div>© 2020</div>
     </div>
     
   </div>
@@ -50,8 +46,8 @@
   <script>
     $(() => {
       $('#header').append(bao.studio.getNavbar({
-        logo     : bao.studio.hnotes.logo,
-        sections : bao.studio.hnotes.sections,
+        logo     : bao.studio.jsnotes.logo,
+        sections : bao.studio.jsnotes.sections,
         section  : 'Home', 
         level    : 0
       }));

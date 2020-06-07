@@ -91,12 +91,7 @@
 
   <script>
     $(() => {
-      $('#header').append(bao.studio.getNavbar({
-        logo     : bao.studio.hnotes.logo,
-        sections : bao.studio.hnotes.sections,
-        section  : 'Contents', 
-        level    : 1
-      }));
+      bao.studio.hnotes.addChapterNavbar();
     });
   </script>
 </body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+  </head>
+  <body>
+    <label for="who">Knock, knock, who's there?</label><br><br>
+    <input type="text" name="who" id="who" value="JavaScript">
+    <button onclick="greeting();">OK</button>
+
+    <script>
+      function greeting() {
+        var input = document.getElementById("who");
+        alert("Hello, " + input.value);
+      }
+    </script>
+  </body>
+</html>

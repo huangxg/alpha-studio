@@ -2,8 +2,8 @@ var bao = bao || {};
 
 bao.studio = bao.studio || {};
 
-bao.studio.hnotes = (() => {
-  var logo = '🕸';
+bao.studio.jsnotes = (() => {
+  var logo = 'JS';
   var sections = {
     Home     : 'index',
     Contents : 'contents',
@@ -14,7 +14,7 @@ bao.studio.hnotes = (() => {
     { 
       title: 'Introduction', link: 'intro/intro.html',
       sections: [
-        { title: 'Simple page' },
+        { title: 'Hello JavaScript' },
         { title: 'Objectives' },
         { title: 'Methodology' },
         { title: 'History' },
@@ -144,7 +144,7 @@ bao.studio.hnotes = (() => {
   }
 
   return {
-    logo     : '🕸',
+    logo     : logo,
     sections : sections,
     chapters : chapters,
     addChapterNavbar : addChapterNavbar

@@ -102,7 +102,28 @@ a:hover {
   width: 128px;
   height: 128px;
   line-height: 128px;
-  font-size: 64pt;
+  margin: 8px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.text-logo.js {
+  background-color: yellow;
+  text-align: right;
+  font-size: 4rem;
+}
+
+.text-logo.js span {
+  position: relative;
+  right: 8px;
+  bottom: -16px;
+}
+
+.text-logo.es6 {
+  background-color: orangered;
+  color: white;
+  text-align: right;
+  font-size: 3rem;
 }
 
 .logo-small {

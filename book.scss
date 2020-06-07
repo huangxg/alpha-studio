@@ -33,7 +33,7 @@ html {
 }
 
 h4.section {
-  padding: .25rem 0;
+  padding: 1rem 0;
   counter-increment: section;
   counter-reset: subsection;
   &::before {
@@ -84,6 +84,10 @@ blockquote {
   }
 }
 
+ul, ol {
+  margin-left: 2rem;
+}
+
 a {
   text-decoration: none;
   &:hover {
@@ -91,20 +95,26 @@ a {
   }
 }
 
-table caption {
-  caption-side: top;
-  text-align: center;
-  counter-increment: table;
+figure {
+  margin: 2rem 0;
+}
+
+figure figcaption {
+  font-size: 1rem;
+  counter-increment: figure;
   &::before {
-    content: "Table " counter(chapter) "." counter(table) ":";
+    content: "Fig " counter(chapter) "." counter(figure) ":";
     margin-right: 0.5rem;
   }
 }
 
-figure figcaption {
-  counter-increment: figure;
+table caption {
+  caption-side: top;
+  text-align: center;
+  color: black;
+  counter-increment: table;
   &::before {
-    content: "Fig " counter(chapter) "." counter(figure) ":";
+    content: "Table " counter(chapter) "." counter(table) ":";
     margin-right: 0.5rem;
   }
 }
@@ -174,9 +184,10 @@ figure figcaption {
 
 .example {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   h5 {
     text-align: center;
+    font-size: 1rem;
     counter-increment: example;
     &::before {
       content: "Example " counter(chapter) "." counter(example) ":";
