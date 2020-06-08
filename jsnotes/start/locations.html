@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function internal() {
+      alert('Internal button clicked');
+    }
+  </script>
+  <script src="locations.js"></script>
+  <title>CSS Locations</title>
+</head>
+<body>
+  <button onclick="alert('Inline button clicked')">Inline</button>
+  <button onclick="internal()">Internal</button>
+  <button onclick="external()">External</button>
+</body>
+</html>

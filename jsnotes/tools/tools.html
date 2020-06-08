@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="../../studio.js"></script>
-  <script src="../hnotes.js"></script>
+  <script src="../jsnotes.js"></script>
 
   <title>Resources and Tools</title>
 </head>
@@ -113,12 +113,11 @@
 
   <script>
     $(() => {
-      bao.studio.hnotes.addChapterNavbar();
+      bao.studio.jsnotes.addChapterNavbar();
 
       var resources =  [
         [ 'CS50', 'Harvard University', 'https://online-learning.harvard.edu/course/cs50-introduction-computer-science' ],
-        [ 'HTML documentations', 'Mozilla', 'https://developer.mozilla.org/en-US/docs/Web/HTML' ],
-        [ 'CSS documentations', 'Mozilla', 'https://developer.mozilla.org/en-US/docs/Web/CSS' ]
+        [ 'JavaScript documentations', 'Mozilla', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' ]
       ];
       new Vue({
         el: '#resources',
@@ -136,6 +135,7 @@
         [ 'Git', 'Linus Torvalds', 'https://git-scm.com/' ],
         [ 'GitHub', 'Microsoft', 'https://github.com/' ],
         [ 'ImageMagick', 'John Cristy', 'https://www.imagemagick.org/' ],
+        [ 'Node.js', 'Ryan Dahl', 'https://nodejs.org/'],
       ];
       new Vue({
         el: '#tools',

@@ -14,8 +14,8 @@ bao.studio.hnotes = (() => {
     { 
       title: 'Introduction', link: 'intro/intro.html',
       sections: [
-        { title: 'Simple page' },
-        { title: 'Objectives' },
+        { title: 'Hello HTML' },
+        { title: 'Basic concepts' },
         { title: 'Methodology' },
         { title: 'History' },
       ]
