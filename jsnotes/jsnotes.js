@@ -12,31 +12,39 @@ bao.studio.jsnotes = (() => {
 
   var chapters = [
     { 
-      title: 'Introduction', link: 'intro/intro.html',
+      name: 'Introduction', url: 'intro/intro.html',
       sections: [
-        { title: 'Hello JavaScript' },
-        { title: 'Basic concepts' },
-        { title: 'Methodology' },
-        { title: 'History' },
+        { name: 'Hello JavaScript' },
+        { name: 'Basic concepts' },
+        { name: 'Methodology' },
+        { name: 'History' },
       ]
     }, {
-      title: 'Get started', link: 'start/start.html',
+      name: 'Get started', url: 'start/start.html',
       sections: [
-        { title: 'Script locations' },
-        { title: 'Node.js' },
+        { name: 'Script locations' },
+        { name: 'Debugging' },
       ]
     }, {
-      title: 'Best Practices', link: '#',
+      name: 'Variables', url: '#',
       sections: [
-        { title: 'Page structure' },
-        { title: 'Naming' },
-        { title: 'Colors and images' },
+        { name: 'What are variables?' }, 
+        { name: 'Declaring and initializing' },
+        { name: 'Declaration types' },
+        { name: 'Dynamic typing' }
       ]
     }, {
-      title: 'Resources and Tools', link: 'tools/tools.html',
+      name: 'Best Practices', url: '#',
       sections: [
-        { title: 'Resources' },
-        { title: 'Tools' },
+        { name: 'Page structure' },
+        { name: 'Naming' },
+        { name: 'Colors and images' },
+      ]
+    }, {
+      name: 'Resources and Tools', url: 'tools/tools.html',
+      sections: [
+        { name: 'Resources' },
+        { name: 'Tools' },
       ]
     }
   ];

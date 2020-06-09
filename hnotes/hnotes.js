@@ -12,124 +12,124 @@ bao.studio.hnotes = (() => {
 
   var chapters = [
     { 
-      title: 'Introduction', link: 'intro/intro.html',
+      name: 'Introduction', url: 'intro/intro.html',
       sections: [
-        { title: 'Hello HTML' },
-        { title: 'Basic concepts' },
-        { title: 'Methodology' },
-        { title: 'History' },
+        { name: 'Hello HTML' },
+        { name: 'Basic concepts' },
+        { name: 'Methodology' },
+        { name: 'History' },
       ]
     }, {
-      title: 'Structures', link: 'structures/structures.html',
+      name: 'Structures', url: 'structures/structures.html',
       sections: [
-        { title: 'Top structures' },
-        { title: 'Paragraphs' },
-        { title: 'Headings' },
+        { name: 'Top structures' },
+        { name: 'Paragraphs' },
+        { name: 'Headings' },
       ]
     }, {
-      title: 'Text', link: 'text/text.html',
+      name: 'Text', url: 'text/text.html',
       sections: [
-        { title: 'Highlights' },
-        { title: 'Quotes' },
-        { title: 'Verbatim' },
-        { title: 'Superscripts and subscripts' },
+        { name: 'Highlights' },
+        { name: 'Quotes' },
+        { name: 'Verbatim' },
+        { name: 'Superscripts and subscripts' },
       ]
     }, {
-      title: 'Lists', link: 'lists/lists.html',
+      name: 'Lists', url: 'lists/lists.html',
       sections: [
-        { title: 'Unordered list' },
-        { title: 'Ordered list' },
-        { title: 'Description list' },
-        { title: 'Nested list' },
+        { name: 'Unordered list' },
+        { name: 'Ordered list' },
+        { name: 'Description list' },
+        { name: 'Nested list' },
       ]
     }, {
-      title: 'Links', link: 'links/links.html',
+      name: 'Links', url: 'links/links.html',
       sections: [
-        { title: 'Absolute and relative links' },
-        { title: 'Anchor' },
-        { title: 'Targets' },
-        { title: 'Email link' }
+        { name: 'Absolute and relative links' },
+        { name: 'Anchor' },
+        { name: 'Targets' },
+        { name: 'Email link' }
       ]
     }, {
-      title: 'Images', link: 'images/images.html',
+      name: 'Images', url: 'images/images.html',
       sections: [
-        { title: 'Basics' },
-        { title: 'Sizes' },
-        { title: 'Positions' },
-        { title: 'File formats' },
+        { name: 'Basics' },
+        { name: 'Sizes' },
+        { name: 'Positions' },
+        { name: 'File formats' },
       ]
     }, {
-      title: 'Tables', link: 'tables/tables.html',
+      name: 'Tables', url: 'tables/tables.html',
       sections: [
-        { title: 'Basics' },
-        { title: 'Captions and headings' },
-        { title: 'Borders and spacing' },
-        { title: 'Alignments' },
-        { title: 'Spanning' },
+        { name: 'Basics' },
+        { name: 'Captions and headings' },
+        { name: 'Borders and spacing' },
+        { name: 'Alignments' },
+        { name: 'Spanning' },
       ]
     }, {
-      title: 'Media', link: 'media/media.html',
+      name: 'Media', url: 'media/media.html',
       sections: [
-        { title: 'Audios' },
-        { title: 'Videos' },
+        { name: 'Audios' },
+        { name: 'Videos' },
       ]
     }, {
-      title: 'CSS', link: 'css/css.html',
+      name: 'CSS', url: 'css/css.html',
       sections: [
-        { title: 'CSS locations' },
-        { title: 'Selectors' },
-        { title: 'Box model' },
-        { title: 'Colors' },
+        { name: 'CSS locations' },
+        { name: 'Selectors' },
+        { name: 'Box model' },
+        { name: 'Colors' },
       ]
     }, {
-      title: 'Text Styles', link: 'text_styles/text_styles.html',
+      name: 'Text Styles', url: 'text_styles/text_styles.html',
       sections: [
-        { title: 'Fonts' },
-        { title: 'Font decorations' },
-        { title: 'Spacing' },
-        { title: 'Alignments' },
+        { name: 'Fonts' },
+        { name: 'Font decorations' },
+        { name: 'Spacing' },
+        { name: 'Alignments' },
       ]
     }, {
-      title: 'List Styles', link: 'list_styles/list_styles.html',
+      name: 'List Styles', url: 'list_styles/list_styles.html',
       sections: [
-        { title: 'List bullets' },
-        { title: 'List numbers' },
-        { title: 'List positions' },
+        { name: 'List bullets' },
+        { name: 'List numbers' },
+        { name: 'List positions' },
       ]
     }, {
-      title: 'Image Styles', link: 'image_styles/image_styles.html',
+      name: 'Image Styles', url: 'image_styles/image_styles.html',
       sections: [
-        { title: 'Image sizes' },
-        { title: 'Image positions' },
-        { title: 'Image as backgound' },
+        { name: 'Image sizes' },
+        { name: 'Image positions' },
+        { name: 'Image as backgound' },
       ]
     }, {
-      title: 'Table Styles', link: 'table_styles/table_styles.html',
+      name: 'Table Styles', url: 'table_styles/table_styles.html',
       sections: [
-        { title: 'Elements' },
-        { title: 'Borders' },
-        { title: 'Spacing' },
+        { name: 'Elements' },
+        { name: 'Borders' },
+        { name: 'Spacing' },
       ]
     }, {
-      title: 'Layouts', link: 'layouts/layouts.html',
+      name: 'Layouts', url: 'layouts/layouts.html',
       sections: [
-        { title: 'Box positions' },
-        { title: 'Floats' },
-        { title: 'Fixed width page' },
-        { title: 'Responsive page' },
+        { name: 'Box positions' },
+        { name: 'Floats' },
+        { name: 'Fixed width page' },
+        { name: 'Responsive page' },
       ]
     }, {
-      title: 'Best Practices', link: 'best_practices/best_practices.html',
+      name: 'Best Practices', url: 'best_practices/best_practices.html',
       sections: [
-        { title: 'Page structure' },
-        { title: 'Naming' },
-        { title: 'Colors and images' },
+        { name: 'Page structure' },
+        { name: 'Naming' },
+        { name: 'Colors and images' },
       ]
     }, {
-      title: 'Resources and Tools', link: 'tools/tools.html',
+      name: 'Resources and Tools', url: 'tools/tools.html',
       sections: [
-        { title: 'Resources' },
-        { title: 'Tools' },
+        { name: 'Resources' },
+        { name: 'Tools' },
       ]
     }
   ];
