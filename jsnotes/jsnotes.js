@@ -3,14 +3,14 @@ var bao = bao || {};
 bao.studio = bao.studio || {};
 
 bao.studio.jsnotes = (() => {
-  var logo = 'JS';
-  var sections = {
+  let logo = 'JS';
+  let sections = {
     Home     : 'index',
     Contents : 'contents',
     About    : 'about', 
   };
 
-  var chapters = [
+  let chapters = [
     { 
       name: 'Introduction', url: 'intro/intro.html',
       sections: [
@@ -26,12 +26,48 @@ bao.studio.jsnotes = (() => {
         { name: 'Debugging' },
       ]
     }, {
-      name: 'Variables', url: '#',
+      name: 'Variables', url: 'variables/variables.html',
       sections: [
         { name: 'What are variables?' }, 
-        { name: 'Declaring and initializing' },
-        { name: 'Declaration types' },
-        { name: 'Dynamic typing' }
+        { name: 'Variable types' },
+        { name: 'Dynamic typing' },
+      ]
+    }, {
+      name: 'Operators', url: '#',
+      sections: [
+        { name: 'Operators' },
+        { name: 'Expressions' },
+        { name: 'Statements' }
+      ]
+    }, {
+      name: 'Strings', url: '#',
+      section: [
+
+      ]
+    }, {
+      name: 'Conditions', url: '#',
+      section: [
+
+      ]
+    }, {
+      name: 'Loops', url: '#',
+      section: [
+
+      ]
+    }, {
+      name: 'Functions', url: '#',
+      section: [
+
+      ]
+    }, {
+      name: 'Events', url: '#',
+      section: [
+
+      ]
+    }, {
+      name: 'Objects', url: '#',
+      section: [
+
       ]
     }, {
       name: 'Best Practices', url: '#',

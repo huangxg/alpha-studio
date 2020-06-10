@@ -1,14 +1,14 @@
 var bao = bao || {};
 
 bao.studio = (() => {
-  var SECTIONS = {
+  let SECTIONS = {
     Home    : 'index',
     Courses : 'courses',
     About   : 'about', 
   };
 
   function getNavbar({section, level, logo = '🖳', sections = SECTIONS} = {}) {
-    var bar = '<nav class="navbar navbar-expand-md navbar-light bg-light">' +
+    let bar = '<nav class="navbar navbar-expand-md navbar-light bg-light">' +
       `  <span class="navbar-brand">${logo}</span>` + 
       '  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"' +
       ' aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' +
@@ -19,7 +19,7 @@ bao.studio = (() => {
       '    <ul class="navbar-nav mr-auto">';
 
     Object.keys(sections).forEach(k => {
-      var active = section === k ? ' active' : '',
+      let active = section === k ? ' active' : '',
           prefix = section !== k || level > 0 ? '../'.repeat(level) : '',
           link = `${prefix}${sections[k]}.html`;
 
@@ -37,13 +37,13 @@ bao.studio = (() => {
 
   function expandToc() {
     $(document).on('click', '.toc-toggle', function() {
-      var $btn = $(this);
+      let $btn = $(this);
       $btn.parent().find('h4.section').toggle('show');
       $btn.text($btn.text() == '+' ? '-' : '+');
     });
 
     $(document).on('click', '.toc-toggle-all a', function() {
-      var $btn = $(this);
+      let $btn = $(this);
 
       if ($btn.text().includes('+')) {
         $btn.text('- Collapse All');

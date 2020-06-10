@@ -1,16 +1,16 @@
-var bao = bao || {};
+let bao = bao || {};
 
 bao.studio = bao.studio || {};
 
 bao.studio.hnotes = (() => {
-  var logo = '🕸';
-  var sections = {
+  let logo = '🕸';
+  let sections = {
     Home     : 'index',
     Contents : 'contents',
     About    : 'about', 
   };
 
-  var chapters = [
+  let chapters = [
     { 
       name: 'Introduction', url: 'intro/intro.html',
       sections: [

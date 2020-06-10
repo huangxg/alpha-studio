@@ -1,4 +1,4 @@
-var bao = bao || {};
+let bao = bao || {};
 
 bao.util = (() => {
   function clone(array) {
@@ -52,7 +52,7 @@ bao.util = (() => {
   }
 
   function getColDefs(cols, addIndexCol) {
-    var colDefs = [],
+    let colDefs = [],
         centerCols = [],
         rightCols = [];
 
@@ -96,7 +96,7 @@ bao.util = (() => {
   }
 
   function getColFoot(cols) {
-    var foot = '<tfoot>\n';
+    let foot = '<tfoot>\n';
     cols.forEach((col, i) => {
       foot += `<th>${col.title}</th>\n`
     });
@@ -104,13 +104,13 @@ bao.util = (() => {
   }
 
   function getColMap(cols) {
-    var colMap = new Map();
+    let colMap = new Map();
     cols.forEach((col, i) => { colMap.set(col.title, i) });
     return colMap;
   }
 
   function datatable(tableId, tableData, options, longTable) {
-    var cols = bao.util.clone(tableData.cols),
+    let cols = bao.util.clone(tableData.cols),
         data = bao.util.clone(tableData.data),
         $table = $(`#${tableId}`);
 
@@ -120,7 +120,7 @@ bao.util = (() => {
       $table.append(bao.util.getColFoot(cols));
     }
 
-    var tableOpts = {
+    let tableOpts = {
       columns    : cols,
       columnDefs : bao.util.getColDefs(cols, longTable),
       data       : data,
@@ -136,7 +136,7 @@ bao.util = (() => {
     }
 
     Object.assign(tableOpts, options);
-    var table = $table.DataTable(tableOpts);
+    let table = $table.DataTable(tableOpts);
 
     if (longTable) {
       table.on( 'order.dt search.dt', () => {
