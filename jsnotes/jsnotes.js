@@ -31,6 +31,7 @@ bao.studio.jsnotes = (() => {
         { name: 'What are variables?' }, 
         { name: 'Variable types' },
         { name: 'Dynamic typing' },
+        { name: 'Variable declaration and Scopes' },
       ]
     }, {
       name: 'Operators', url: '#',

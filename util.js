@@ -1,4 +1,4 @@
-let bao = bao || {};
+var bao = bao || {};
 
 bao.util = (() => {
   function clone(array) {
