@@ -97,7 +97,8 @@ blockquote footer::before {
   content: "-- ";
 }
 
-ul, ol {
+.container ul, .container ol {
+  margin-top: 1rem;
   margin-left: 2rem;
 }
 

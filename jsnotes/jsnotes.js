@@ -34,11 +34,14 @@ bao.studio.jsnotes = (() => {
         { name: 'Variable declaration and Scopes' },
       ]
     }, {
-      name: 'Operators', url: '#',
+      name: 'Operators', url: 'operators/operators.html',
       sections: [
-        { name: 'Operators' },
-        { name: 'Expressions' },
-        { name: 'Statements' }
+        { name: 'Arithmetic operators' },
+        { name: 'Increment and decrement operators' },
+        { name: 'Assignment operators' },
+        { name: 'Comparison operators' },
+        { name: 'Logical operators' },
+        { name: 'Operator precedence' },
       ]
     }, {
       name: 'Strings', url: '#',

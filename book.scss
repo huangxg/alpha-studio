@@ -89,8 +89,11 @@ blockquote {
   }
 }
 
-ul, ol {
-  margin-left: 2rem;
+.container {
+  ul, ol {
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
 }
 
 a {
