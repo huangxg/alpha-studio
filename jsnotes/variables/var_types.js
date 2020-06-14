@@ -1,4 +1,4 @@
-let catName = 'Ginger'; // string 
+let catName = 'Tom'; // string 
 let catAge = 3;         // number
 let catFriendly = true; // boolean
 
@@ -8,7 +8,7 @@ students[0];
 
 // object
 let cat = {
-  name     : 'Ginger',
+  name     : 'Tom',
   age      : 3,
   friendly : true
 };

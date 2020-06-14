@@ -44,9 +44,13 @@ bao.studio.jsnotes = (() => {
         { name: 'Operator precedence' },
       ]
     }, {
-      name: 'Strings', url: '#',
+      name: 'Strings', url: 'strings/strings.html',
       section: [
-
+        { name: 'Creating strings' }, 
+        { name: 'Single or double quotes?' }, 
+        { name: 'Escape symbols' }, 
+        { name: 'Concatenating strings' }, 
+        { name: 'String templates' },
       ]
     }, {
       name: 'Conditions', url: '#',

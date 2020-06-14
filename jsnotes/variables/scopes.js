@@ -7,15 +7,15 @@ function demo() {
   let duck = 'Donald';
   {
     let blocked = 'blocked';
-    console.log(blocked);   // blocked
+    blocked;   // blocked
   }
 
-  console.log(cat);         // Tom
-  console.log(mouse);       // Jerry
-  console.log(duck);        // Donald
-  console.log(blocked)      // ReferenceError 
-  console.log(dog);         // ReferenceError
-  console.log(another_dog); // undefined
+  cat;         // Tom
+  mouse;       // Jerry
+  duck;        // Donald
+  blocked      // ReferenceError 
+  dog;         // ReferenceError
+  another_dog; // undefined
 
   let dog = 'Pluto';
   var another_dog = 'Goofy';
