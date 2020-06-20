@@ -57,6 +57,7 @@ bao.studio.jsnotes = (() => {
       sections: [ 
         { name: 'String length' },
         { name: 'Character and substring' },
+        { name: 'Start and end' },
         { name: 'Changing string' },
       ] 
     }, {
@@ -79,7 +80,18 @@ bao.studio.jsnotes = (() => {
     }, {
       name: 'Loops', url: '#',
       sections: [
-
+        { name: 'for loop' },
+        { name: 'while and do loops' },
+        { name: 'break and continue' },
+      ]
+    }, {
+      name: 'More arrays', url: '#',
+      sections: [
+        { name: 'forEach' },
+        { name: 'map' },
+        { name: 'reduce' },
+        { name: 'find and filter' },
+        { name: 'every and some' },
       ]
     }, {
       name: 'Functions', url: '#',
