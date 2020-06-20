@@ -1,4 +1,4 @@
-let catName = 'Tom'; // string 
+let catName = 'Tom';    // string 
 let catAge = 3;         // number
 let catFriendly = true; // boolean
 

@@ -60,6 +60,14 @@ bao.studio.jsnotes = (() => {
         { name: 'Changing string' },
       ] 
     }, {
+      name: 'Arrays', url: 'arrays/arrays.html',
+      sections: [
+        { name: 'Creating arrays' },
+        { name: 'Accessing array items' },
+        { name: 'Adding and removing array items' },
+        { name: 'Converting between string and array' }
+      ]
+    }, {
       name: 'Conditions', url: '#',
       section: [
 
