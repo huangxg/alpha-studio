@@ -68,28 +68,32 @@ bao.studio.jsnotes = (() => {
         { name: 'Converting between string and array' }
       ]
     }, {
-      name: 'Conditions', url: '#',
-      section: [
-
+      name: 'Conditions', url: 'conditions/conditions.html',
+      sections: [
+        { name: 'if condition' },
+        { name: 'else branch' },
+        { name: 'Conditions with logical operators' },
+        { name: 'Nested conditions' },
+        { name: 'switch condition' },
       ]
     }, {
       name: 'Loops', url: '#',
-      section: [
+      sections: [
 
       ]
     }, {
       name: 'Functions', url: '#',
-      section: [
+      sections: [
 
       ]
     }, {
       name: 'Events', url: '#',
-      section: [
+      sections: [
 
       ]
     }, {
       name: 'Objects', url: '#',
-      section: [
+      sections: [
 
       ]
     }, {
