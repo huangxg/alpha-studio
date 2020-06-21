@@ -78,7 +78,7 @@ bao.studio.jsnotes = (() => {
         { name: 'switch condition' },
       ]
     }, {
-      name: 'Loops', url: '#',
+      name: 'Loops', url: 'loops/loops.html',
       sections: [
         { name: 'for loop' },
         { name: 'while and do loops' },
