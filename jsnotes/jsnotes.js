@@ -85,7 +85,7 @@ bao.studio.jsnotes = (() => {
         { name: 'break and continue' },
       ]
     }, {
-      name: 'More arrays', url: '#',
+      name: 'More arrays', url: 'more_arrays/more_arrays.html',
       sections: [
         { name: 'forEach' },
         { name: 'map' },
