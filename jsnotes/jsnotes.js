@@ -28,7 +28,7 @@ bao.studio.jsnotes = (() => {
     }, {
       name: 'Variables', url: 'variables/variables.html',
       sections: [
-        { name: 'What are variables?' }, 
+        { name: 'What is a variable?' }, 
         { name: 'Variable types' },
         { name: 'Dynamic typing' },
         { name: 'Variable declaration and Scopes' },
@@ -94,9 +94,13 @@ bao.studio.jsnotes = (() => {
         { name: 'every and some' },
       ]
     }, {
-      name: 'Functions', url: '#',
+      name: 'Functions', url: 'functions/functions.html',
       sections: [
-
+        { name: 'What is a function?' },
+        { name: 'Built-in functions' },
+        { name: 'Anonymous functions' },
+        { name: 'Function parameters' },
+        { name: 'Function scope' },
       ]
     }, {
       name: 'Events', url: '#',

@@ -98,8 +98,7 @@ blockquote footer::before {
 }
 
 .container ul, .container ol {
-  margin-top: 1rem;
-  margin-left: 2rem;
+  margin: 1rem;
 }
 
 a {
