@@ -99,7 +99,7 @@ bao.studio.jsnotes = (() => {
         { name: 'What is a function?' },
         { name: 'Built-in functions' },
         { name: 'Anonymous functions' },
-        { name: 'Function parameters' },
+        { name: 'Parameters and return value' },
         { name: 'Function scope' },
       ]
     }, {
