@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Greeting</title>
+    <script src="handler.js"></script>
+    <title>Event Handler</title>
   </head>
   <body>
     <label for="who">Knock, knock, who's there?</label><br><br>
     <input type="text" name="who" id="who" value="JavaScript">
-    <button onclick="greeting();">OK</button>
+    <button id="ok-btn">OK</button>
 
     <script>
-      function greeting() {
-        let input = document.querySelector('#who');
-        alert('Hello, ' + input.value);
-      }
+      let btn = document.querySelector('#ok-btn');
+      btn.onclick = greeting;
     </script>
   </body>
 </html>

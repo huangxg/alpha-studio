@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="handler.js"></script>
+    <title>Event Listners</title>
+  </head>
+  <body>
+    <label for="who">Knock, knock, who's there?</label><br><br>
+    <input type="text" name="who" id="who" value="JavaScript">
+    <button id="ok-btn">OK</button>
+
+    <script>
+      let btn = document.querySelector('#ok-btn');
+      btn.addEventListener('click', greeting);
+      btn.addEventListener('click', function() {
+        let input = document.querySelector("#who");
+        console.log(input.value + ' knocked the door.');
+      });
+    </script>
+  </body>
+</html>
