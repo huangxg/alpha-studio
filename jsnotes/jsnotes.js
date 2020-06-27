@@ -23,6 +23,7 @@ bao.studio.jsnotes = (() => {
       name: 'Get started', url: 'start/start.html',
       sections: [
         { name: 'Script locations' },
+        { name: 'Comments' },
         { name: 'Debugging' },
       ]
     }, {
@@ -103,14 +104,22 @@ bao.studio.jsnotes = (() => {
         { name: 'Function scope' },
       ]
     }, {
-      name: 'Events', url: '#',
+      name: 'Events', url: 'events/events.html',
       sections: [
-
+        { name: 'What are events?' },
+        { name: 'Event handler' },
+        { name: 'Event listners' },
       ]
     }, {
       name: 'Objects', url: '#',
       sections: [
-
+      ]
+    }, {
+      name: 'More events', url: 'more_events/more_events.html',
+      sections: [
+        { name: 'Event objects' },
+        { name: 'Preventing default behavior' },
+        { name: 'Event bubbling and capture' },
       ]
     }, {
       name: 'Best Practices', url: '#',
