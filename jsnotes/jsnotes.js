@@ -108,11 +108,14 @@ bao.studio.jsnotes = (() => {
       sections: [
         { name: 'What are events?' },
         { name: 'Event handler' },
-        { name: 'Event listners' },
+        { name: 'Event listeners' },
       ]
     }, {
-      name: 'Objects', url: '#',
+      name: 'Objects', url: 'objects/objects.html',
       sections: [
+        { name: 'What is an object?' },
+        { name: 'Accessing object properties' },
+        { name: '"this" keyword' },
       ]
     }, {
       name: 'More events', url: 'more_events/more_events.html',
