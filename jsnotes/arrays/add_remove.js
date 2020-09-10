@@ -1,4 +1,4 @@
-let avengers = ['Captain America', 'Ironman', 'Wonder Woman'];
+let avengers = ['Captain America', 'Ironman', 'Spiderman'];
 avengers.push('Doctor Strange');
 avengers;
 avengers.pop();
