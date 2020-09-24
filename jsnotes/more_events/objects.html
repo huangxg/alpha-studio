@@ -11,9 +11,9 @@
 
     <script>
       let buttons = document.querySelectorAll('button');
-      buttons.forEach(function(btn) {
-        btn.addEventListener('click', function(e){
-          console.log(e.target.innerHTML + ' is there.');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', e => {
+          alert("It's " + e.target.innerHTML);
         });
       });
     </script>

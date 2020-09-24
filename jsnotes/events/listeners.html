@@ -13,7 +13,7 @@
     <script>
       let btn = document.querySelector('#ok-btn');
       btn.addEventListener('click', greeting);
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', () => {
         let input = document.querySelector("#who");
         console.log(input.value + ' knocked the door.');
       });

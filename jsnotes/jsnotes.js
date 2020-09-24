@@ -122,7 +122,7 @@ bao.studio.jsnotes = (() => {
       sections: [
         { name: 'Event objects' },
         { name: 'Preventing default behavior' },
-        { name: 'Event bubbling and capture' },
+        { name: 'Event bubbling and capturing' },
       ]
     }, {
       name: 'Best Practices', url: '#',
