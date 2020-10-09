@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Events</title>
+</head>
+<body>
+  <form action="" method="post" novalidate>
+    <table>
+      <tr>
+        <td><label for="username">Username</label></td>
+        <td>
+          <input type="text" name="username" id="username" required minlength="8">
+          <span class="error" aria-live="polite"></span>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="password">Password</label></td>
+        <td>
+          <input type="password" name="password" id="password" required minlength="8">
+          <span class="error" aria-live="polite"></span>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td>
+          <input type="email" name="email" id="email" required minlength="8">
+          <span class="error" aria-live="polite"></span>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <button type="reset" id="reset-btn">Reset</button>
+    <button type="submit" id="submit-btn">Submit</button>
+  </form>
+
+  <script>
+    let form  = document.getElementsByTagName('form')[0],
+        inputNames = ['username', 'password', 'email'],
+        inputs = [];
+
+    inputNames.forEach(name => {
+      inputs.push({
+        input: document.querySelector(`#${name}`),
+        error: document.querySelector(`#${name} + span.error`)
+      });
+    });
+
+    form.addEventListener('submit', e => {
+      if (inputs.some(input => !input.input.validity.valid)) {
+        showErrors();
+      } else {
+        alert('Congratulations! You completed the registration.');
+      }
+      e.preventDefault();
+    });
+
+    form.addEventListener('reset', e => {
+      inputs.forEach(input => {
+        input.error.innerHTML = '';
+      });
+    });
+
+    function showErrors() {
+      inputs.forEach(input => {
+        let name = input.input.id;
+        if (input.input.validity.valueMissing) {
+          input.error.textContent = `${name} missing`;
+        } else if (input.input.validity.tooShort) {
+          input.error.textContent = `${name} too short`;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
