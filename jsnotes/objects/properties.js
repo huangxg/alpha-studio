@@ -7,10 +7,6 @@ let cat = {
   },
 };
 
-cat.name;
-cat['age'];
-cat.skills[0];
-cat.introduction();
-
-cat.name = 'Ginger the Best';
-cat.skills.push('chasing mouse');
+Object.keys(cat).forEach(k => {
+  console.log(`name: ${k}, type: ${typeof cat[k]}, value: ${cat[k]}`);
+});
