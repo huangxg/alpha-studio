@@ -8,16 +8,26 @@
 <body>
   <p>Knock, knock, who is there?</p>
   <ul id="name-list">
-    <li>Tom</li>
-    <li>Jerry</li>
+    <li id="tom">Tom</li>
+    <li id="jerry">Jerry</li>
     <li>Mickey</li>
     <li>Donald</li>
   </ul>
 
   <script>
-    let list = document.querySelector('#name-list');
+    let list = document.querySelector('#name-list'),
+        tom = document.querySelector('#tom'),
+        jerry = document.querySelector('#jerry');
+
     list.addEventListener('click', e => {
-      console.log("It's " + e.target.innerHTML);
+      console.log(`It's ${e.target.innerHTML}`);
+    });
+    tom.addEventListener('click', e => {
+      console.log('Tom the Smart');
+    });
+    jerry.addEventListener('click', e => {
+      console.log('Jerry the Smartest');
+      e.stopPropagation();
     });
   </script>
 </body>
