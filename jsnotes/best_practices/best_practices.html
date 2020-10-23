@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../studio.css">
+  <link rel="stylesheet" href="../../book.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" 
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
+    crossorigin="anonymous"></script>
+  <script src="../../studio.js"></script>
+  <script src="../jsnotes.js"></script>
+
+  <title>Best Practices</title>
+</head>
+<body style="counter-reset: chapter 14 table example">
+  <header id="header"></header>
+
+  <div class="container mb-5">
+    <div class="title">
+      <h3 class="chapter">Best Practices</h3>
+    </div>
+
+    <h4 class="section">Source files</h4>
+    <ol>
+      <li>Use lowercase letters for directory names and filenames. Connect words with underscore, not blank space.</li>
+      <li>Use <code>.html</code> or <code>.htm</code> as file extension for HTML, <code>.css</code> for style sheets, and <code>.js</code> for JavaScript.</li>
+      <li>Encode files in UTF-8.</li>
+    </ol>
+
+    <h4 class="section">Formatting</h4>
+    <ol>
+      <li>Use braces for all control structures.</li>
+      <li>Use K&R style for nonempty blocks.</li>
+      <li>Indent with 2 spaces.</li>
+      <li>One statement per line, ending with a semicolon.</li>
+      <li>Use 80 charcters as the column limit.</li>
+      <li>Break a line at a higher syntactic level.</li>
+      <li>Indent continued lines with 4 spaces.</li>
+      <li>Use a space between reserved keywords with parenthesis and braces.</li>
+      <li>Use a space after comma and colon.</li>
+    </ol>
+
+    <h4 class="section">Language features</h4>
+    <ol>
+      <li>Do not mix quoted and unquoted keys.</li>
+      <li>Use single quotes for ordinary strings.</li>
+      <li>Use template literals over complex string concatenation.</li>
+    </ol>
+
+    <h4 class="section">Naming</h4>
+    <ol>
+      <li>Use descriptive names for variables and functions.</li>
+      <li>Use <code>camelCase</code> instead of <code>snake_case</code> or <code>kebab-case</code>.</li>
+    </ol>
+
+  </div>
+  
+  <script>
+    $(() => {
+      bao.studio.jsnotes.addChapterNavbar();
+    });
+  </script>
+
+</body>
+</html>

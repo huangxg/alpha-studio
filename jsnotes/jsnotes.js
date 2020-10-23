@@ -109,12 +109,14 @@ bao.studio.jsnotes = (() => {
         { name: 'What are events?' },
         { name: 'Event handler' },
         { name: 'Event listeners' },
+        { name: 'Form Events' },
       ]
     }, {
       name: 'Objects', url: 'objects/objects.html',
       sections: [
         { name: 'What is an object?' },
         { name: 'Accessing object properties' },
+        { name: 'Iterating object properties' },
         { name: '"this" keyword' },
       ]
     }, {
@@ -125,11 +127,12 @@ bao.studio.jsnotes = (() => {
         { name: 'Event bubbling and capturing' },
       ]
     }, {
-      name: 'Best Practices', url: '#',
+      name: 'Best Practices', url: 'best_practices/best_practices.html',
       sections: [
-        { name: 'Page structure' },
+        { name: 'Source files' },
+        { name: 'Formatting' },
+        { name: 'Language features' },
         { name: 'Naming' },
-        { name: 'Colors and images' },
       ]
     }, {
       name: 'Resources and Tools', url: 'tools/tools.html',
