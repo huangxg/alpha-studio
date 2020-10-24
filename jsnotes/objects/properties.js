@@ -7,6 +7,14 @@ let cat = {
   },
 };
 
+for (p in cat) {
+  console.log(`name: ${p}, type: ${typeof cat[p]}, value: ${cat[p]}`);
+}
+
 Object.keys(cat).forEach(k => {
   console.log(`name: ${k}, type: ${typeof cat[k]}, value: ${cat[k]}`);
 });
+
+for (k of Object.keys(cat)) {
+  console.log(`name: ${k}, type: ${typeof cat[k]}, value: ${cat[k]}`);
+}
