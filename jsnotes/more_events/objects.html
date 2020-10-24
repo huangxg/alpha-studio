@@ -14,6 +14,9 @@
       buttons.forEach(btn => {
         btn.addEventListener('click', e => {
           alert("It's " + e.target.innerHTML);
+          for (p in e) {
+            console.log(p);
+          }
         });
       });
     </script>
