@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../studio.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" 
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" 
+    crossorigin="anonymous"></script>
+  <script src="../studio.js"></script>
+  <script src="pynotes.js"></script>
+
+  <title>About</title>
+</head>
+<body>
+  <header id="header"></header>
+
+  <div class="container mb-5">
+    <div class="title">
+      <h1>About</h1>
+    </div>
+
+    <p>I started computer programming with C in early 1990s, and got used to it. Later on, some languages, e.g. C++, JavaScript, Java, C#, Perl, PHP, didn't surprised me much, because they adopted C-like syntax, more or less.</p>
+
+    <p>My first glance of Python was not so pleasant. Its significant use of whitespace made me nervous. Control structures without curly braces looked like they were going to fall off somewhere. You would know the feeling if you have seen switch-case statements fall through without break.</p>
+
+    <p>The situation improved a little when I worked on a telecommunication project around 2014. Its frontend is a mobile app <a href="https://cogi.com/">Cogi</a> that records audios; and the backend is a service platform written in Python.</p>
+
+    <p>After that I worked with Ruby and Rails for a few years. When AlphaGo from Google DeepMind beated Lee Sedol in 2016, deep learning and artificial intelligence became a fashion again. Python came back to my sight. This time, it looked not bad. Probably Ruby changed my opinion on dynamic typing.</p>
+
+    <p>Python has been used for web applications (e.g. Django), scientific computing (e.g. NumPy), machine learning (e.g. TensorFlow, Pytorch), and scripting. Being simpler than some other languages, Python is a nice language for programming beginners.</p>
+
+    <p>This course uses <a href="https://greenteapress.com/wp/think-python-2e/">Think Python 2nd Edition</a> by Allen B. Downey, which is available in HTML and PDF for free. You can also buy the paperpack at Amazon.com.</p>
+
+    <h2>Dedication</h2>
+    <p>To family.</p>
+
+    <h2>Acknowlegements</h2>
+    <p>Thanks to Python Software Foundation.</p>
+
+    <p>Thanks to Microsoft for Visual Studio Code and GitHub.</p>
+
+    <p>Thanks to professor Allen B. Downey for his book.</p>
+
+    <p></p>
+  </div>
+
+  <script>
+    $(() => {
+      $('#header').append(bao.studio.getNavbar({
+        logo     : bao.studio.pynotes.logo,
+        sections : bao.studio.pynotes.sections,
+        section: 'About', 
+        level: 0 
+      }));
+    });
+  </script>
+
+</body>
+</html>
