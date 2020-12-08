@@ -132,47 +132,104 @@ bao.studio.pynotes = (() => {
     }, {
       name: 'Dictionaries', url: '#',
       sections: [
-        { name: '' },
+        { name: 'What is a dictionary?' },
+        { name: 'A collection of counters' },
+        { name: 'Traversing a dictionary' },
+        { name: 'Reverse lookup' },
+        { name: 'Dictionaries and lists' },
+        { name: 'Memos' },
+        { name: 'Global variables' },
       ]
     }, {
       name: 'Tuples', url: '#',
       sections: [
-        { name: '' },
+        { name: 'What is a tuple?' },
+        { name: 'Tupple assignment' },
+        { name: 'Tuples as return values' },
+        { name: 'Variable-length arument tuples' },
+        { name: 'Lists and tuples' },
+        { name: 'Dictionaries and tuples' },
+        { name: 'Sequencies of sequencies' },
       ]
     }, {
       name: 'Case study: data structure selection', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Word frequency analysis' },
+        { name: 'Random numbers' },
+        { name: 'Word histogram' },
+        { name: 'Most common words' },
+        { name: 'Optional parameters' },
+        { name: 'Dictionary substraction' },
+        { name: 'Random words' },
+        { name: 'Markov analysis' },
+        { name: 'Data structures' },
       ]
     }, {
       name: 'Files', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Persistence' },
+        { name: 'Reading and writing' },
+        { name: 'Format operator' },
+        { name: 'Filenames and paths' },
+        { name: 'Catch exceptions' },
+        { name: 'Databases' },
+        { name: 'Pickling' },
+        { name: 'Pipes' },
+        { name: 'Writing modules' },
       ]
     }, {
       name: 'Classes and objects', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Customized types' },
+        { name: 'Attributes' },
+        { name: 'Rectangles' },
+        { name: 'Instances and return values' },
+        { name: 'Objects are mutable' },
+        { name: 'Copying' },
       ]
     }, {
       name: 'Classes and functions', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Time' },
+        { name: 'Pure functions' },
+        { name: 'Modifiers' },
+        { name: 'Prototyping vs planning' },
       ]
     }, {
       name: 'Classes and methods', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Object-oriented features' },
+        { name: 'Printing objects' },
+        { name: 'The init method' },
+        { name: 'The __str__ method' },
+        { name: 'Operator overloading' },
+        { name: 'Type-based dispatch' },
+        { name: 'Polymorphism' },
       ]
     }, {
       name: 'Inheritance', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Card objects' },
+        { name: 'Class attributes' },
+        { name: 'Comparing cards' },
+        { name: 'Decks' },
+        { name: 'Printing the deck' },
+        { name: 'Add, remove, shuffle and sort' },
+        { name: 'Inheritance' },
+        { name: 'Class diagrams' },
       ]
     }, {
       name: 'Goodies', url: '#',
       sections: [
-        { name: '' },
+        { name: 'Conditional expressions' },
+        { name: 'List compressions' },
+        { name: 'Generator expressions' },
+        { name: 'any and all' },
+        { name: 'Sets' },
+        { name: 'Counters' },
+        { name: 'defaultdict' },
+        { name: 'Named tuples' },
+        { name: 'Gathering keyword args' },
       ]
     }, {
       name: 'Resources and Tools', url: '#',
