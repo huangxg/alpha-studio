@@ -143,19 +143,9 @@ bao.studio.jsnotes = (() => {
     }
   ];
 
-  function addChapterNavbar() {
-    $('#header').append(bao.studio.getNavbar({
-      logo     : logo,
-      sections : sections,
-      section  : 'Contents', 
-      level    : 1
-    }));
-  }
-
   return {
     logo     : logo,
     sections : sections,
-    chapters : chapters,
-    addChapterNavbar : addChapterNavbar
+    chapters : chapters
   };
 })();

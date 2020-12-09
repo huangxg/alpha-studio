@@ -31,6 +31,15 @@ bao.studio = (() => {
     return bar;
   }
 
+  function addChapterNavbar(book) {
+    $('#header').append(bao.studio.getNavbar({
+      logo     : book.logo,
+      sections : book.sections,
+      section  : 'Contents', 
+      level    : 1
+    }));
+  }
+
   function disableUnfinishedLinks() {
     $('.toc .chapter a[href="#"]').removeAttr('href');
   }
@@ -76,6 +85,7 @@ bao.studio = (() => {
   }
 
   return {
+    addChapterNavbar       : addChapterNavbar,
     disableUnfinishedLinks : disableUnfinishedLinks,
     expandToc              : expandToc,
     getNavbar              : getNavbar,

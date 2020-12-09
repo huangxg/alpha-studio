@@ -21,7 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="../../studio.js"></script>
-  <script src="../hnotes.js"></script>
+  <script src="../pynotes.js"></script>
 
   <title>Resources and Tools</title>
 </head>
@@ -80,12 +80,6 @@
       </v-simple-table>
     </div>
 
-    <h5 class="subsection">Chrome tips</h5>
-    <ul>
-      <li>Inspect disabled in context menu.</li>
-        <a href="https://stackoverflow.com/questions/32999677/developer-tools-getting-disabled">https://stackoverflow.com/questions/32999677/developer-tools-getting-disabled</a>
-    </ul>
-
     <h5 class="subsection">Basic Git commands</h5>
     <ul>
       <li><samp>git init</samp></li>
@@ -113,12 +107,11 @@
 
   <script>
     $(() => {
-      bao.studio.addChapterNavbar(bao.studio.hnotes);
+      bao.studio.addChapterNavbar(bao.studio.pynotes);
 
       let resources =  [
         [ 'CS50', 'Harvard University', 'https://online-learning.harvard.edu/course/cs50-introduction-computer-science' ],
-        [ 'HTML documentations', 'Mozilla', 'https://developer.mozilla.org/en-US/docs/Web/HTML' ],
-        [ 'CSS documentations', 'Mozilla', 'https://developer.mozilla.org/en-US/docs/Web/CSS' ]
+        [ 'Python documentations', 'Python Software Foundation', 'https://www.python.org/doc/' ],
       ];
       new Vue({
         el: '#resources',
@@ -131,12 +124,10 @@
       let tools = [
         [ 'Homebrew', 'Max Howell', 'https://brew.sh/' ],
         [ 'Chocolatey', 'Chocolatey Software', 'https://chocolatey.org/' ],
-        [ 'Chrome', 'Google', 'https://www.google.com/chrome/' ],
-        [ 'JSFiddle', 'Oskar Krawczyk, Piotr Zalewa', 'https://jsfiddle.net/' ],
         [ 'Visual Studio Code', 'Microsoft', 'https://code.visualstudio.com/' ],
         [ 'Git', 'Linus Torvalds', 'https://git-scm.com/' ],
         [ 'GitHub', 'Microsoft', 'https://github.com/' ],
-        [ 'ImageMagick', 'John Cristy', 'https://www.imagemagick.org/' ],
+        [ 'Python', 'Python Software Foundation', 'https://www.python.org/downloads/'],
       ];
       new Vue({
         el: '#tools',

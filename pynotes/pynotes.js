@@ -232,7 +232,7 @@ bao.studio.pynotes = (() => {
         { name: 'Gathering keyword args' },
       ]
     }, {
-      name: 'Resources and Tools', url: '#',
+      name: 'Resources and Tools', url: 'tools/tools.html',
       sections: [
         { name: 'Resources' },
         { name: 'Tools' },
@@ -240,19 +240,9 @@ bao.studio.pynotes = (() => {
     }
   ];
 
-  function addChapterNavbar() {
-    $('#header').append(bao.studio.getNavbar({
-      logo     : logo,
-      sections : sections,
-      section  : 'Contents', 
-      level    : 1
-    }));
-  }
-
   return {
     logo     : logo,
     sections : sections,
-    chapters : chapters,
-    addChapterNavbar : addChapterNavbar
+    chapters : chapters
   };
 })();
