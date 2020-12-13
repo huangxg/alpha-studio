@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
       crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/vuetify@2.3.21/dist/vuetify.min.css"
       integrity="sha384-5Y/vxbN8evgZjZ5+/z8yWoZjgg5DskBEHR46PUHu+rw1lRVN5ahwI6yelQfBtVN8"
       crossorigin="anonymous">
@@ -22,9 +25,13 @@
   <script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"
       integrity="sha384-cwVe6U8Tq7F/3JIj6xeDzOwuqeChcmRcdYqDGfoYmdAurw7L3f4dFHhEJKfxv96A"
       crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
   <script src="https://unpkg.com/vuetify@2.3.21/dist/vuetify.min.js"
       integrity="sha384-Il4HxiKkot+1M1hMZiyZSvH1DmSR2Rdh3sgT2E31hFVwla7RfuzdbufdBswLGts6"
       crossorigin="anonymous"></script>
+  <script>var exports = exports || {};</script>
+  <script src="https://unpkg.com/vuetify@2.3.21/es5/locale/zh-Hans.js"></script>
+  <script>var zhHans = exports.default;</script>
   <script src="studio.js"></script>
 
   <title>Alpha Studio</title>
@@ -39,11 +46,40 @@
     </div>
 
     <div id="courses-table" class="table-wrap">
-      <v-data-table :headers="headers" :items="items" hide-default-footer>
+      <v-simple-table>
+        <template v-slot:default>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th class="text-right">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in courses" :key="item.name">
+              <td>{{ item.id }}</td>
+              <td><a :href=item.url>{{ item.name }}</a></td>
+              <td class="text-right">{{ item.hours }}</td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
+    </div>
+
+    <div id="courses-table1" class="table-wrap" data-app>
+      <v-data-table :headers="headers" :items="courses">
         <template v-slot:item.name="{ item }">
           <a :href=item.url>{{ item.name }}</a>
         </template>
       </v-data-table>
+    </div>
+
+    <div id="courses-table2" class="table-wrap">
+      <b-table hover :fields="fields" :items="courses">
+        <template #cell(name)="data">
+          <a :href=data.item.url>{{ data.value }}</a>
+        </template>
+      </b-table>
     </div>
 
     <div class="publisher m-5 p-5">
@@ -91,16 +127,41 @@
       new Vue({
         el: '#courses-table',
         vuetify: new Vuetify(),
+        data: { courses: courses }
+      });
+
+      new Vue({
+        el: '#courses-table1',
+        vuetify: new Vuetify({
+          lang: {
+            locales: { zhHans },
+            current: 'zhHans',
+          },
+        }),
         data: {
           headers: [
             { text: 'Id', value: 'id' },
             { text: 'Title', value: 'name' },
             { text: 'Hours', value: 'hours', align: 'right' },
           ],
-          items: courses
+          courses: courses
         }
       });
 
+      new Vue({
+        el: '#courses-table2',
+        data: {
+          fields: [
+            'id', 
+            { key: 'name', label: 'Title' }, 
+            { key: 'hours', class: 'text-right' }
+          ],
+          courses: courses
+        }
+      });
+      // Vuetify v-simple-table 20 + 5 lines
+      // Vuetify v-data-table 7 + 12 lines
+      // BootstrapVue b-table 7 + 11 lines
     });
   </script>
 </body>

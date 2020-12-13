@@ -12,6 +12,7 @@
       integrity="sha384-5Y/vxbN8evgZjZ5+/z8yWoZjgg5DskBEHR46PUHu+rw1lRVN5ahwI6yelQfBtVN8"
       crossorigin="anonymous">
   <link rel="stylesheet" href="../../book.css">
+  <link rel="stylesheet" href="../../studio.css">
 
   <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
       integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" 
@@ -44,45 +45,21 @@
     </blockquote>
 
     <h4 class="section">Resources</h4>
-    <div id="resources" class="table-wrap">
-      <v-simple-table>
-        <template v-slot:default>
-          <caption>Resources</caption>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Provider</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in resources" :key="item.name">
-              <td><a :href=item.url>{{ item.name }}</a></td>
-              <td>{{ item.provider }}</td>
-            </tr>
-          </tbody>
+    <div id="resources-table" class="table-wrap">
+      <v-data-table caption="Resources" hide-default-footer :headers="headers" :items="items">
+        <template v-slot:item.name="{ item }">
+          <a :href=item.url>{{ item.name }}</a>
         </template>
-      </v-simple-table>
+      </v-data-table>
     </div>
 
     <h4 class="section">Tools</h4>
-    <div id="tools" class="table-wrap">
-      <v-simple-table>
-        <template v-slot:default>
-          <caption>Tools</caption>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Provider</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in tools" :key="item.name">
-              <td><a :href=item.url>{{ item.name }}</a></td>
-              <td>{{ item.provider }}</td>
-            </tr>
-          </tbody>
+    <div id="tools-table" class="table-wrap">
+      <v-data-table caption="Tools" hide-default-footer :headers="headers" :items="items">
+        <template v-slot:item.name="{ item }">
+          <a :href=item.url>{{ item.name }}</a>
         </template>
-      </v-simple-table>
+      </v-data-table>
     </div>
 
     <h5 class="subsection">Chrome tips</h5>
@@ -129,11 +106,17 @@
         [ 'Test on Arrays', 'Mozilla', 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays' ],
       ];
       new Vue({
-        el: '#resources',
+        el: '#resources-table',
         vuetify: new Vuetify(),
-        data: { resources: resources.map(t => {
-          return { name: t[0], provider: t[1], url: t[2] };
-        }) }
+        data: {
+          headers: [
+            { text: 'Name', value: 'name' },
+            { text: 'Provider', value: 'provider' },
+          ],
+          items: resources.map(t => {
+            return { name: t[0], provider: t[1], url: t[2] };
+          })
+        }
       });
 
       let tools = [
@@ -144,16 +127,22 @@
         [ 'Visual Studio Code', 'Microsoft', 'https://code.visualstudio.com/' ],
         [ 'Git', 'Linus Torvalds', 'https://git-scm.com/' ],
         [ 'GitHub', 'Microsoft', 'https://github.com/' ],
-        [ 'ImageMagick', 'John Cristy', 'https://www.imagemagick.org/' ],
         [ 'Node.js', 'Ryan Dahl', 'https://nodejs.org/'],
       ];
       new Vue({
-        el: '#tools',
+        el: '#tools-table',
         vuetify: new Vuetify(),
-        data: { tools: tools.map(t => {
-          return { name: t[0], provider: t[1], url: t[2] };
-        }) }
+        data: {
+          headers: [
+            { text: 'Name', value: 'name' },
+            { text: 'Provider', value: 'provider' },
+          ],
+          items: tools.map(t => {
+            return { name: t[0], provider: t[1], url: t[2] };
+          })
+        }
       });
+
     });
   </script>
 </body>

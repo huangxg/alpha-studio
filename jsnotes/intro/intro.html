@@ -12,6 +12,7 @@
       integrity="sha384-5Y/vxbN8evgZjZ5+/z8yWoZjgg5DskBEHR46PUHu+rw1lRVN5ahwI6yelQfBtVN8"
       crossorigin="anonymous">
   <link rel="stylesheet" href="../../book.css">
+  <link rel="stylesheet" href="../../studio.css">
 
   <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
       integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" 
@@ -72,26 +73,9 @@
       <footer>杨慎·临江仙</footer>
     </blockquote>
 
-    <div id="computer-techs" class="table-wrap">
-      <v-simple-table>
-        <template v-slot:default>
-          <caption>Computer Technologies</caption>
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Technology</th>
-              <th>People</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in techs" :key="item.name">
-              <td>{{ item.time }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.people }}</td>
-            </tr>
-          </tbody>
-        </template>
-      </v-simple-table>
+    <div id="computer-techs-table" class="table-wrap">
+      <v-data-table caption="Computer technologies" hide-default-footer
+          :headers="headers" :items="items"></v-data-table>
     </div>
 
     <figure class="text-center">
@@ -104,27 +88,9 @@
       <figcaption>Eniac (courtesy of Wikipedia)</figcaption>
     </figure>
 
-    <div id="web-techs" class="table-wrap">
-      <v-simple-table>
-        <template v-slot:default>
-          <caption>Web Technologies</caption>
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Technology</th>
-              <th>People</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in techs" :key="item.name">
-              <td>{{ item.time }}</td>
-              <td>{{ item.name }}</td>
-              <td>{{ item.people }}</td>
-            </tr>
-          </tbody>
-        </template>
-      </v-simple-table>
-    </div>
+  <div id="web-techs-table" class="table-wrap">
+    <v-data-table caption="Web technologies" hide-default-footer
+        :headers="headers" :items="items"></v-data-table>
   </div>
 
   <script>
@@ -143,11 +109,18 @@
         [ 1995, 'Java', 'James Gosling' ],
       ];
       new Vue({
-        el: '#computer-techs',
+        el: '#computer-techs-table',
         vuetify: new Vuetify(),
-        data: { techs: computerTechs.map(t => {
-          return { time: t[0], name: t[1], people: t[2] };
-        }) }
+        data: {
+          headers: [
+            { text: 'Time', value: 'time' },
+            { text: 'Technology', value: 'name' },
+            { text: 'People', value: 'people' },
+          ],
+          items: computerTechs.map(t => {
+            return { time: t[0], name: t[1], people: t[2] };
+          })
+        }
       });
 
       let webTechs = [
@@ -158,12 +131,20 @@
         [ 2015, 'ECMAScript 2015, ES6', 'Ecma International' ],
       ];
       new Vue({
-        el: '#web-techs',
+        el: '#web-techs-table',
         vuetify: new Vuetify(),
-        data: { techs: webTechs.map(t => {
-          return { time: t[0], name: t[1], people: t[2] };
-        }) }
+        data: {
+          headers: [
+            { text: 'Time', value: 'time' },
+            { text: 'Technology', value: 'name' },
+            { text: 'People', value: 'people' },
+          ],
+          items: webTechs.map(t => {
+            return { time: t[0], name: t[1], people: t[2] };
+          })
+        }
       });
+
     });
   </script>
 
