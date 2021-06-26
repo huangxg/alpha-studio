@@ -45,6 +45,13 @@ bao.studio.jsnotes = (() => {
         { name: 'Operator precedence' },
       ]
     }, {
+      name: 'Type Conversions', url: 'type_conversions/conversions.html',
+      sections: [
+        { name: 'Converting to String' }, 
+        { name: 'Converting to Number' }, 
+        { name: 'Converting to Boolean' }, 
+      ]
+    }, {
       name: 'Strings', url: 'strings/strings.html',
       sections: [
         { name: 'Creating strings' }, 
