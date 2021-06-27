@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+      crossorigin="anonymous">
+  <link rel="stylesheet" href="../../book.css">
+
+  <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
+      integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" 
+      crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" 
+      crossorigin="anonymous"></script>
+  <script src="../../studio.js"></script>
+  <script src="../jsnotes.js"></script>
+
+  <title>Numbers</title>
+</head>
+<body style="counter-reset: chapter 5 table example">
+  <header id="header"></header>
+
+  <div class="container mb-5">
+    <div class="title">
+      <h3 class="chapter">Numbers</h3>
+    </div>
+
+    <h4 class="section">Big and small numbers</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=num_big_small.js"></script>
+      <h5><a href="create.js">Big and small numbers</a></h5>
+    </div>
+
+    <h4 class="section">Number bases</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=num_bases.js"></script>
+      <h5><a href="single_double.js">Number bases</a></h5>
+    </div>
+
+    <h4 class="section">Rounding</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=num_rounding.js"></script>
+      <h5><a href="escape.js">Rounding</a></h5>
+    </div>
+
+  </div>
+
+  <script>
+    $(() => {
+      bao.studio.addChapterNavbar(bao.studio.jsnotes);
+    });
+  </script>
+  
+</body>
+</html>

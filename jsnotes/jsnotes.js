@@ -52,6 +52,13 @@ bao.studio.jsnotes = (() => {
         { name: 'Converting to Boolean' }, 
       ]
     }, {
+      name: 'Numbers', url: 'numbers/numbers.html',
+      sections: [
+        { name: 'Big and small numbers' }, 
+        { name: 'Number bases' }, 
+        { name: 'Rounding' }, 
+      ]
+    }, {
       name: 'Strings', url: 'strings/strings.html',
       sections: [
         { name: 'Creating strings' }, 
@@ -132,6 +139,15 @@ bao.studio.jsnotes = (() => {
         { name: 'Event objects' },
         { name: 'Preventing default behavior' },
         { name: 'Event bubbling and capturing' },
+      ]
+    }, {
+      name: 'More objects', url: 'more_objects/more_objects.html',
+      sections: [
+        { name: 'Object references' },
+        { name: 'Copying objects' },
+        { name: 'Cloning objects' },
+        { name: 'Object merging' },
+        { name: 'Constructor' },
       ]
     }, {
       name: 'Best Practices', url: 'best_practices/best_practices.html',
