@@ -144,7 +144,6 @@ bao.studio.jsnotes = (() => {
       name: 'More objects', url: 'more_objects/more_objects.html',
       sections: [
         { name: 'Object references' },
-        { name: 'Copying objects' },
         { name: 'Cloning objects' },
         { name: 'Object merging' },
         { name: 'Constructor' },
