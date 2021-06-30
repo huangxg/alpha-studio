@@ -45,13 +45,6 @@ bao.studio.jsnotes = (() => {
         { name: 'Operator precedence' },
       ]
     }, {
-      name: 'Type Conversions', url: 'type_conversions/conversions.html',
-      sections: [
-        { name: 'Converting to String' }, 
-        { name: 'Converting to Number' }, 
-        { name: 'Converting to Boolean' }, 
-      ]
-    }, {
       name: 'Numbers', url: 'numbers/numbers.html',
       sections: [
         { name: 'Big and small numbers' }, 
@@ -145,7 +138,7 @@ bao.studio.jsnotes = (() => {
       sections: [
         { name: 'Object references' },
         { name: 'Cloning objects' },
-        { name: 'Object merging' },
+        { name: 'Merging objects' },
         { name: 'Constructor' },
       ]
     }, {

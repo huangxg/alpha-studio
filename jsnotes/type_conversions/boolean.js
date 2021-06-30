@@ -1,7 +1,0 @@
-let b = Boolean('y')
-console.log(typeof b)
-console.log(b)
-console.log(Boolean('n'))
-console.log(Boolean(''))
-console.log(Boolean(1))
-console.log(Boolean(0))
