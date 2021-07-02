@@ -74,7 +74,8 @@ bao.studio.jsnotes = (() => {
         { name: 'Creating arrays' },
         { name: 'Accessing array items' },
         { name: 'Adding and removing array items' },
-        { name: 'Converting between string and array' }
+        { name: 'Converting between string and array' },
+        { name: 'Array destructing' }
       ]
     }, {
       name: 'Conditions', url: 'conditions/conditions.html',
@@ -124,6 +125,7 @@ bao.studio.jsnotes = (() => {
         { name: 'What is an object?' },
         { name: 'Accessing object properties' },
         { name: 'Iterating object properties' },
+        { name: 'Object destructing' },
         { name: '"this" keyword' },
       ]
     }, {
