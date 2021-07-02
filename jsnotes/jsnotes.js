@@ -69,6 +69,15 @@ bao.studio.jsnotes = (() => {
         { name: 'Changing string' },
       ] 
     }, {
+      name: 'Objects', url: 'objects/objects.html',
+      sections: [
+        { name: 'What is an object?' },
+        { name: 'Accessing object properties' },
+        { name: 'Iterating object properties' },
+        { name: 'Object destructing' },
+        { name: '"this" keyword' },
+      ]
+    }, {
       name: 'Arrays', url: 'arrays/arrays.html',
       sections: [
         { name: 'Creating arrays' },
@@ -112,6 +121,14 @@ bao.studio.jsnotes = (() => {
         { name: 'Function scope' },
       ]
     }, {
+      name: 'More objects', url: 'more_objects/more_objects.html',
+      sections: [
+        { name: 'Object references' },
+        { name: 'Cloning objects' },
+        { name: 'Merging objects' },
+        { name: 'Constructor' },
+      ]
+    }, {
       name: 'Events', url: 'events/events.html',
       sections: [
         { name: 'What are events?' },
@@ -120,28 +137,11 @@ bao.studio.jsnotes = (() => {
         { name: 'Form Events' },
       ]
     }, {
-      name: 'Objects', url: 'objects/objects.html',
-      sections: [
-        { name: 'What is an object?' },
-        { name: 'Accessing object properties' },
-        { name: 'Iterating object properties' },
-        { name: 'Object destructing' },
-        { name: '"this" keyword' },
-      ]
-    }, {
       name: 'More events', url: 'more_events/more_events.html',
       sections: [
         { name: 'Event objects' },
         { name: 'Preventing default behavior' },
         { name: 'Event bubbling and capturing' },
-      ]
-    }, {
-      name: 'More objects', url: 'more_objects/more_objects.html',
-      sections: [
-        { name: 'Object references' },
-        { name: 'Cloning objects' },
-        { name: 'Merging objects' },
-        { name: 'Constructor' },
       ]
     }, {
       name: 'Best Practices', url: 'best_practices/best_practices.html',
