@@ -127,6 +127,7 @@ bao.studio.jsnotes = (() => {
         { name: 'Cloning objects' },
         { name: 'Merging objects' },
         { name: 'Constructor' },
+        { name: 'Prototype' },
       ]
     }, {
       name: 'Events', url: 'events/events.html',

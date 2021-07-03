@@ -67,7 +67,7 @@
     </div>
 
     <div id="courses-table1" class="table-wrap" data-app>
-      <v-data-table :headers="headers" :items="courses">
+      <v-data-table :headers="headers" :items="courses" class="table-striped">
         <template v-slot:item.name="{ item }">
           <a :href=item.url>{{ item.name }}</a>
         </template>
@@ -84,7 +84,7 @@
 
     <div class="publisher m-5 p-5">
       <div>Alpha Studio</div>
-      <div>© 2019 - 2020</div>
+      <div>© 2019 - 2021</div>
     </div>
   </div>
 
