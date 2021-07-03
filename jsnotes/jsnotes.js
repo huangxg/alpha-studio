@@ -130,6 +130,16 @@ bao.studio.jsnotes = (() => {
         { name: 'Prototype' },
       ]
     }, {
+      name: 'More functions', url: 'more_functions/more_functions.html',
+      sections: [
+        { name: 'Rest parameters' },
+        { name: 'Spread operator' },
+        { name: 'Named parameters' },
+        { name: 'Testing arguments' },
+        { name: 'Catching exceptions' },
+        { name: 'Throwing exceptions' },
+      ]
+    }, {
       name: 'Events', url: 'events/events.html',
       sections: [
         { name: 'What are events?' },
