@@ -55,19 +55,14 @@ bao.studio.jsnotes = (() => {
       name: 'Strings', url: 'strings/strings.html',
       sections: [
         { name: 'Creating strings' }, 
-        { name: 'Single or double quotes?' }, 
         { name: 'Escaping symbols' }, 
         { name: 'Concatenating strings' }, 
         { name: 'String templates' },
-      ]
-    }, {
-      name: 'More strings', url: 'more_strings/more_strings.html',
-      sections: [ 
         { name: 'String length' },
         { name: 'Character and substring' },
         { name: 'Start and end' },
         { name: 'Changing string' },
-      ] 
+      ]
     }, {
       name: 'Objects', url: 'objects/objects.html',
       sections: [
