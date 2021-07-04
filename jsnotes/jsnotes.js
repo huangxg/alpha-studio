@@ -140,6 +140,14 @@ bao.studio.jsnotes = (() => {
         { name: 'Throwing exceptions' },
       ]
     }, {
+      name: 'Classes', url: 'classes/classes.html',
+      sections: [
+        { name: 'Constructor' },
+        { name: 'Getter and setter' },
+        { name: 'Static fields and methods' },
+        { name: 'Subclass' },
+      ]
+    }, {
       name: 'Events', url: 'events/events.html',
       sections: [
         { name: 'What are events?' },

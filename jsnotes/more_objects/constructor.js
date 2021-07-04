@@ -6,8 +6,8 @@ function Pet(name, type, age, animalYearRatio) {
   this.animalYear = () => this.animalYearRatio * this.age;
 }
 
-let ginger = new Pet('Ginger', 'British Shothair', 4, 5),
-    cherry = new Pet('Cherry', 'Golden Retriver', 3, 7);
+let ginger = new Pet('Ginger', 'British Shorthair', 4, 5),
+    cherry = new Pet('Cherry', 'Golden Retriever', 3, 7);
 
 console.log(ginger);
 console.log(ginger.animalYear());

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
+      crossorigin="anonymous">
+  <link rel="stylesheet" href="../../book.css">
+
+  <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
+      integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" 
+      crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" 
+      crossorigin="anonymous"></script>
+  <script src="../../studio.js"></script>
+  <script src="../jsnotes.js"></script>
+
+  <title>Classes</title>
+</head>
+<body style="counter-reset: chapter 15 table example">
+  <header id="header"></header>
+
+  <div class="container mb-5">
+    <div class="title">
+      <h3 class="chapter">Classes</h3>
+    </div>
+
+    <h4 class="section">Constructor</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=class_constructor.js"></script>
+      <h5><a href="constructor.js">Constructor</a></h5>
+    </div>
+
+    <h4 class="section">Getter and setter</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=class_getter_setter.js"></script>
+      <h5><a href="getter_setter.js">Getter and setter</a></h5>
+    </div>
+
+    <h4 class="section">Private fields and methods</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=class_private.js"></script>
+      <h5><a href="private.js">Private fields and methods</a></h5>
+    </div>
+
+    <h4 class="section">Static fields and methods</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=class_static.js"></script>
+      <h5><a href="static.js">Static fields and methods</a></h5>
+    </div>
+
+    <h4 class="section">Subclass</h4>
+    <div class="example">
+      <script src="https://gist.github.com/huangxg/e07cf29533cca60dbcda955d2b6c3466.js?file=class_subclass.js"></script>
+      <h5><a href="subclass.js">Subclass</a></h5>
+    </div>
+
+    <hr>
+    <h4>Exercises</h4>
+
+  </div>
+
+  <script>
+    $(() => {
+      bao.studio.addChapterNavbar(bao.studio.jsnotes);
+    });
+  </script>
+
+</body>
+</html>
