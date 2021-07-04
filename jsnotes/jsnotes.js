@@ -148,6 +148,14 @@ bao.studio.jsnotes = (() => {
         { name: 'Subclass' },
       ]
     }, {
+      name: 'Date and time', url: 'date/date.html',
+      sections: [
+        { name: 'Creating date' },
+        { name: 'Getters and setters' },
+        { name: 'Static methods' },
+        { name: 'Formating dates' },
+      ]
+    }, {
       name: 'Events', url: 'events/events.html',
       sections: [
         { name: 'What are events?' },
