@@ -64,15 +64,6 @@ bao.studio.jsnotes = (() => {
         { name: 'Changing string' },
       ]
     }, {
-      name: 'Objects', url: 'objects/objects.html',
-      sections: [
-        { name: 'What is an object?' },
-        { name: 'Accessing object properties' },
-        { name: 'Iterating object properties' },
-        { name: 'Object destructing' },
-        { name: '"this" keyword' },
-      ]
-    }, {
       name: 'Arrays', url: 'arrays/arrays.html',
       sections: [
         { name: 'Creating arrays' },
@@ -98,13 +89,13 @@ bao.studio.jsnotes = (() => {
         { name: 'break and continue' },
       ]
     }, {
-      name: 'More arrays', url: 'more_arrays/more_arrays.html',
+      name: 'Objects', url: 'objects/objects.html',
       sections: [
-        { name: 'forEach' },
-        { name: 'map' },
-        { name: 'reduce' },
-        { name: 'find and filter' },
-        { name: 'every and some' },
+        { name: 'What is an object?' },
+        { name: 'Accessing object properties' },
+        { name: 'Iterating object properties' },
+        { name: 'Object destructing' },
+        { name: '"this" keyword' },
       ]
     }, {
       name: 'Functions', url: 'functions/functions.html',
@@ -114,6 +105,15 @@ bao.studio.jsnotes = (() => {
         { name: 'Anonymous functions' },
         { name: 'Parameters and return value' },
         { name: 'Function scope' },
+      ]
+    }, {
+      name: 'More arrays', url: 'more_arrays/more_arrays.html',
+      sections: [
+        { name: 'forEach' },
+        { name: 'map' },
+        { name: 'reduce' },
+        { name: 'find and filter' },
+        { name: 'every and some' },
       ]
     }, {
       name: 'More objects', url: 'more_objects/more_objects.html',
