@@ -1,17 +1,17 @@
-// 1st while
-let i = 1, 
+// 1st do while
+let i = 1,
     sum = 0;
-while (i <= 10) {
+do {
   sum += i;
   i++;
-}
+} while (i <= 10)
 console.log(`i: ${i}, sum: ${sum}`);
 
-// 2nd while
+// 2nd do while
 i = 10;
 sum = 0;
-while (i >0) {
+do {
   sum += i;
   i--;
-}
+} while (i > 0)
 console.log(`i: ${i}, sum: ${sum}`);

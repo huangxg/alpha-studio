@@ -85,7 +85,7 @@ bao.studio.jsnotes = (() => {
       name: 'Loops', url: 'loops/loops.html',
       sections: [
         { name: 'for loop' },
-        { name: 'while and do loops' },
+        { name: 'while and do...while loops' },
         { name: 'break and continue' },
       ]
     }, {
