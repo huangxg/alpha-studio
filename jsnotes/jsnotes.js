@@ -143,9 +143,17 @@ bao.studio.jsnotes = (() => {
         { name: 'Subclass' },
       ]
     }, {
-      name: 'Date and time', url: 'date/date.html',
+      name: 'Sets', url: 'sets/sets.html',
       sections: [
-        { name: 'Creating date' },
+        { name: 'Creating sets' },
+        { name: 'Adding and removing elements' },
+        { name: 'Checking elements' },
+        { name: 'Iterating over set' },
+      ]
+    }, {
+      name: 'Date and time', url: 'dates/dates.html',
+      sections: [
+        { name: 'Creating dates' },
         { name: 'Getters and setters' },
         { name: 'Static methods' },
         { name: 'Formating dates' },
