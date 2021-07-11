@@ -151,6 +151,15 @@ bao.studio.jsnotes = (() => {
         { name: 'Iterating over set' },
       ]
     }, {
+      name: 'Maps', url: 'maps/maps.html',
+      sections: [
+        { name: 'Creating maps' },
+        { name: 'Setting and getting elements' },
+        { name: 'Removing elements' },
+        { name: 'Checking elements' },
+        { name: 'Iterating over map' },
+      ]
+    }, {
       name: 'Date and time', url: 'dates/dates.html',
       sections: [
         { name: 'Creating dates' },
